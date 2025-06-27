@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ কুইজ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>🌟 বাংলা কুইজ অ্যাপ</h1>
+    <div class="controls">
+      <select id="quiz-set">
+        <option value="set1.json">সেট ১</option>
+        <option value="set2.json">সেট ২</option>
+      </select>
+      <button id="dark-toggle">🌙 মোড</button>
+    </div>
+    <div id="timer">⏳ 20s</div>
+    <div id="progress-bar"><div id="progress"></div></div>
+  </div>
+
+  <div id="quiz-container">
+    <h2 id="question">প্রশ্ন লোড হচ্ছে...</h2>
+    <div id="options"></div>
+    <button id="next">পরবর্তী</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      loadQuiz(document.getElementById("quiz-set").value);
+    });
+
+    document.getElementById("quiz-set").addEventListener("change", () => {
+      loadQuiz(document.getElementById("quiz-set").value);
+    });
+  </script>
+</body>
+</html>
