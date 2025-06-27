@@ -1,4 +1,4 @@
-/* style.css – Layout, Grid, Dark Mode & Animations */
+/* style.css – Layout, Grid, Dark Mode, Mobile-Friendly */
 
 body {
   font-family: 'Noto Sans Bengali', sans-serif;
@@ -23,7 +23,7 @@ body.dark {
   margin-top: 10px;
 }
 
-#quiz-set, #dark-toggle {
+select, #dark-toggle {
   padding: 6px 10px;
   margin: 5px;
   border-radius: 6px;
@@ -32,7 +32,7 @@ body.dark {
 }
 
 #quiz-container {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   background: #fff;
   border-radius: 10px;
@@ -80,6 +80,7 @@ button {
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -118,5 +119,11 @@ body.dark .result-qa {
 @media (max-width: 600px) {
   .grid-options {
     grid-template-columns: 1fr;
+  }
+  select {
+    width: 100%;
+  }
+  button {
+    width: 100%;
   }
 }
